@@ -1,0 +1,284 @@
+/* index ：首页的样式内容 */
+.entry{
+    height: 500px;
+    background-color: #f5f5f5;
+}
+/* 轮播图 banner */
+.banner{
+    height: 500px;
+    /* 子（a）绝父(banner)相 */
+    position: relative;
+}
+.prev , .next{
+    position: absolute;
+     /* 垂直居中：top50% 往上走高度的一半 */
+    top: 50%;
+    margin-top: -22px;
+    width: 45px;
+    height: 45px;
+    background: rgba(0, 0, 0, .3) url(../images/sprites.png) no-repeat;
+    /* 设置半透明及圆 */
+    border-radius: 50%;
+}
+.next{
+    right: 10px;
+    background-position:-22px -57px ;
+}
+.prev{
+    left: 260px;
+    background-position:14px -59px ;
+}
+.circle{
+    position: absolute;
+    bottom: 30px;
+    left: 680px;
+}
+.circle li{
+    float: left;
+    margin-right: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .3);
+    /* 鼠标经过li显示“手” */
+    cursor: pointer;
+}
+.circle .active{
+    background-color: rgba(255, 255, 255, 1);
+}
+/* 侧边栏 */
+.entry .container{
+    position: relative;
+}
+.category{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 500px;
+    background-color: black;
+    opacity: 0.8;
+}
+.category ul li a{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 36px;
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+}
+.category ul li a:hover{
+    background-color: #27ba9b;
+}
+.category ul li a em{
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+/* 小箭头 */
+.category ul li a::after{
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 19px;
+    width: 6px;
+    height: 14px;
+    background: url(../images/sprites.png) 
+    no-repeat -40px -109px;
+}
+/* 新鲜好物模块 */
+.box-hd{
+    margin-top: 40px;
+    height:60px;
+}
+.box-hd h3{
+    float: left;
+    font-size: 29px;
+    color: #333;
+    /* 文字加粗 */
+    font-weight: 400;
+}
+.box-hd h3 small{
+    font-size: 16px;
+    color: #999;
+    margin-left: 20px;
+}
+.box-hd a{
+    float: right;
+    margin-top: 10px;
+}
+.box-hd .more::after{
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 13px;
+    background: url(../images/sprites.png)
+    no-repeat 0px -109px;
+    margin-left: 10px;
+}
+.box-bd{
+    height: 408px;
+}
+.box-bd ul li{
+    width: 304px;
+    float: left;
+    top:0;
+    height: 408px;
+    margin-right: 8px;
+    position: relative;
+    text-align: center;
+    transition: all .3s;
+}
+.box-bd ul li:last-child{
+    margin-right: 0;
+}
+.box-bd .new{
+    position: absolute;
+    top: 18px;
+    left: 16px;
+    width: 29px;
+    height: 51px;
+    border: 1px solid #27ba9b;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #27ba9b;
+    line-height: 22px;
+    text-align: center;
+}
+.box-bd ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* 鼠标经过li盒子往上走，添加盒子阴影 */
+.box-bd ul li:hover{
+    top:-5px;
+    box-shadow: 0 15px 30px rgba(0 0 0 /10%);
+
+}
+.box-bd ul li img{
+    width: 304px;
+    height: 305px;
+}
+.box-bd ul li h4{
+    margin: 18px 0 10px 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+.box-bd ul li p{
+   font-size: 17px;
+   color: #9a2e1f;
+}
+.box-bd ul li p span{
+    font-size: 23px;
+}
+.info{
+    color: #000;
+}
+.remen{
+    background-color: rgb(253, 249, 249);
+}
+.brand .box-bd ul li img{
+    height: 100%;
+}
+/* 生鲜模块 */
+.box-hd ul{
+    float: left;
+    margin-left: 635px;
+    margin-top: 9px;
+}
+.box-hd ul li{
+    float: left;
+}
+.box-hd ul li a{
+    padding: 0 12px;
+}
+.box-hd ul li a:hover{
+    background-color: #27ba9b;
+    color:#ffff
+}
+/* goods模块 */
+.goods{
+    height:610px;
+    
+}
+.goods-left{
+    float: left;
+    width: 240px;
+    height: 610px;
+}
+.goods-left img{
+    width: 240px;
+    height: 610px;
+}
+.goods-right{
+    float: left;
+    width: 1000px;
+    height: 610px;
+}
+.goods-right ul li{
+    float: left;
+    width: 240px;
+    height: 304px;
+    margin-left: 10px;
+    border: 2.5px solid transparent;
+    transition: all .5s;
+    position: relative;
+    overflow: hidden;
+}
+.pic{
+    height: 200px;
+    padding: 0 20px;
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+}
+.goods-right ul li p{
+    margin: 0 25px;
+}
+.goods-right ul li h4{
+    margin: 0 25px;
+    font-size: 400;
+}
+.goods-right .price{
+    margin: 0 25px;
+    font-size: 17px;
+    color: #9a2e1f;
+}
+.goods-right .price span{
+    font-size: 22px;
+}
+.goods-right ul li:hover{
+    /* 盒子原先就有边框（透明状态）鼠标经过变色 */
+    border:2.5px solid #27ba9b;
+}
+.find-b{
+    position: absolute;
+    bottom: -87px;
+    left: 0;
+    height: 84px;
+    width: 100%;
+    background-color: #27ba9b;
+    text-align: center;
+    padding: 10px 55px 0;
+    color: #fff;
+    transition: all .3s;
+
+}
+.find-b h5{
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 7px;
+    font-weight: 400;
+}
+.goods-right .find-b p{
+    margin:5px 0 0;
+    font-size: 12px;
+}
+/* 鼠标经过li 让find-b往上走 */
+.goods-right ul li:hover .find-b{
+   bottom: 0;
+}

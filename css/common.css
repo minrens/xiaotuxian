@@ -1,0 +1,238 @@
+/* 该css文件主要设置头部和底部的样式-----公用 */
+/* 版心  container（容器）  .w  */
+.container {
+    width: 1240px;
+    /* 居中 */
+    margin: 0 auto;
+}
+ .top-nav{
+     height: 52px;
+     /* 行高 */
+     line-height: 52px;
+     background-color: #333333;
+ }
+ .top-nav ul {
+    float: right;
+ }
+ .top-nav ul li {
+     /* 注意这里的浮动是左浮动!!!!! */
+    float: left;
+ }
+
+ .top-nav ul li a { 
+    color: #dcdcdc;
+    /* padding:上下0 左右13 */
+    padding: 0 13px;
+    border-right: 1px solid #666666;  
+}
+/* !!!!!!!!!! */
+.top-nav ul li:last-child a{
+    border-right: 0;   
+}
+.top-nav ul li a:hover{
+    color: #5eb69c;
+}
+.top-nav ul li:last-child  a::before{
+    content: '';
+   display: inline-block;
+   width: 11px;
+   height: 16px;
+   margin-right: 8px;
+   margin-top: -5px;
+   vertical-align: middle;
+   /* 路径：相对路径 */
+   background: url(../images/sprites.png) no-repeat -160px -70px;
+}
+/* 主导航模块 */
+.main-nav {
+    height: 130px;
+}
+.logo {
+    float: left;
+    width: 200px;
+    height: 65px;
+    margin-top: 30px;
+}
+.logo a{
+    display: block;
+    width: 207px;
+    height: 100%;
+    background: url(../images/logo.png);
+
+    /* 隐藏文字
+        1、font-size:0;
+        2、text-indent:-9999999px;（首行缩进）
+          overflow: hidden;
+    */
+        /* background: url(../images/logo.png); */
+        /* 背景调整尺寸 和盒子一样大 */
+        background-size: 207px 50px;
+        text-indent:-9999px;
+        overflow: hidden;   
+}
+/* nav部分 */
+.nav {
+    float: left;
+    margin-left: 40px;
+    margin-top: 56px;
+}
+.nav li{
+    float: left;
+    margin-right: 48px;
+}
+.nav li a{
+    /* a是行内元素，所以不能直接给padding元素，需要转换为block */
+    display: block;
+    padding-bottom: 6px;
+}
+.nav li a:hover{
+    border-bottom: 2px solid #27ba9b;
+}
+.search{
+    width: 172px;
+    height: 30px;
+    float: left;
+    margin-top: 56px;
+    position: relative;
+}
+.search input{
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #e7e7e7;
+    padding-left: 30px;
+}
+.search ::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 18px;
+    height: 18px;
+    background: url(../images/sprites.png)
+    no-repeat -79px -70px
+}
+/* 购物车 */
+.cart{
+    float: left;
+    /* margin:上 右 下 左 */
+    margin: 58px 0 0 15px;
+}
+.cart a{
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url(../images/sprites.png)
+    no-repeat -119px -70px;
+    position: relative;
+}
+.cart a span{
+    position: absolute;
+    top: -10px;
+    left: 14px;
+    padding: 0 6px;
+    border-radius: 9px;
+    background-color: #e26237;
+    color: #fff;
+    font-size: 12px;
+}
+/* 网页底部模块 */
+.concat{
+    height: 300px;
+}
+/* 让concat里面的container发生变化 */
+.concat .container{
+    padding-top: 75px;
+}
+.concat .container dl{
+    float: left;
+    width: 310px;
+    height: 30px;
+    padding:0 55px
+}
+.concat .container dl dt{
+    color: #999;
+    text-align: center;
+}
+
+.concat .container dl dd{
+    width: 92px;
+    height: 92px;
+    border: 1px solid #eee;
+    float: left;
+    margin-top: 35px;
+    text-align: center;
+}
+.concat .container dl dd:nth-child(2){
+    margin-right: 5px;
+}
+.service dd::before{
+content: "";
+display: block;
+width: 29px;
+height: 27px;
+/* 上：20 左右：auto 下：10 */
+margin: 20px auto 10px;
+}
+.kefu::before{
+    background: url(../images/sprites.png) no-repeat -250px -70px ;
+}
+.fankui::before{
+    background: url(../images/sprites.png) no-repeat -350px -70px ;
+}
+.footer-bd{
+    height: 340px;
+    background-color: #333;
+}
+.slogin{
+    padding-top: 56px;
+    height: 174px;
+    border-bottom: 3px solid #434343;
+}
+.slogin ul li{
+    float: left;
+    width: 413px;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+    font-size: 28px;
+    color: #ffff;
+}
+.slogin ul li::before{
+    /* before：是行内元素 */
+    content: "";
+    /* 转换为行内块元素 要和文字一行 */
+    display: inline-block;
+     /* 行内块元素默认和元素的基线对齐  需要中线对齐*/
+    vertical-align: middle;
+    width: 58px;
+    height: 58px;
+    background: url(../images/sprites.png) no-repeat;
+    margin-right: 12px;
+}
+.slogin ul li:nth-child(2):before{
+    background-position:-65px 1px ;
+}
+.slogin ul li:nth-child(3):before{
+    background-position:-130px 0 ;
+}
+.copyright{
+    padding-top: 40px;
+    color: #9999;
+    font-size: 16px;
+    text-align: center;
+}
+.copyright p{
+    margin-bottom: 20px;
+}
+/* a标签的颜色需要单独设置 */
+.copyright p a{
+    color: #9999;
+    font-size: 16px;
+    padding: 0 8px;
+
+}
+
+
+
+
+
